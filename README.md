@@ -14,4 +14,4 @@ $ make mpi
 Once successfully compiled you will notice the executable lmp_serial or lmp_mpi. This executable can be used along with the input files
 to run the simulations.
 
-This Package has been tested with lammps-23Jun2022 version
+This Package has been tested with lammps-2Aug2023 version
