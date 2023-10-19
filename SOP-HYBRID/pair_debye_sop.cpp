@@ -78,7 +78,7 @@ void PairDebye_SOP::compute(int eflag, int vflag)
   double qqr2e = force->qqr2e;  
   tagint *domain_id = atom->domain_id;
   tagint i_domain_id, j_domain_id;
-tagint *tag = atom->tag;
+  tagint *tag = atom->tag;
   inum = list->inum;
   ilist = list->ilist;
   numneigh = list->numneigh;
@@ -115,8 +115,8 @@ tagint *tag = atom->tag;
      if( (i_domain_id == 0) || (j_domain_id == 0) || (i_domain_id != j_domain_id) ){
          dielectric_prefactor = 1.0/dielectric_uf;
         }else{
-        dielectric_prefactor = 1.0/dielectric_f;
-//        dielectric_prefactor = 0.0;//1.0/dielectric_f;
+//        dielectric_prefactor = 1.0/dielectric_f;
+        dielectric_prefactor = 0.0;//1.0/dielectric_f;
 //        std::cout<<qqr2e<<"\n";
         }      
 
@@ -143,9 +143,9 @@ tagint *tag = atom->tag;
           f[j][1] -= dely * fpair;
           f[j][2] -= delz * fpair;
         }
-       if(abs(fpair) > 1.0){
-     std::cout  << tag[i] << " " <<  tag[j] <<" " <<fpair << " "<< dielectric_prefactor<<"\n";
-   }
+//       if(abs(fpair) > 1.0){
+//     std::cout  << tag[i] << " " <<  tag[j] <<" " <<fpair << " "<< dielectric_prefactor<<"\n";
+//   }
 
         if (eflag) {
           if (rsq < cut_coulsq[itype][jtype]){
@@ -388,8 +388,8 @@ double PairDebye_SOP::single(int i, int j, int itype, int jtype, double rsq, dou
      if( (i_domain_id == 0) || (j_domain_id == 0) || (i_domain_id != j_domain_id)){
          dielectric_prefactor = 1.0/dielectric_uf;
         }else{
-        dielectric_prefactor = 1.0/dielectric_f;        
-//        dielectric_prefactor = 0.0;//1.0/dielectric_f;
+//        dielectric_prefactor = 1.0/dielectric_f;        
+        dielectric_prefactor = 0.0;//1.0/dielectric_f;
 //        std::cout<<qqr2e<<"\n";
         }       
 
