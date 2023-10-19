@@ -9,6 +9,9 @@
    the GNU General Public License.
 
    See the README file in the top-level LAMMPS directory.
+   
+   Modified by : Krishnakanth B, Theoretical Biophysics Laboratory, 
+   Molecular Biophysics Unit, Indian Institute of Science, Bangalore - 560012   
 ------------------------------------------------------------------------- */
 
 #ifndef LMP_ATOM_H
@@ -87,7 +90,6 @@ class Atom : protected Pointers {
 
   // molecular systems and SOP Bead systems
   tagint *molecule, *domain_id, *residue_id;
-
   int *molindex, *molatom;
 
   int **nspecial;      // 0,1,2 = cumulative # of 1-2,1-3,1-4 neighs

@@ -10,6 +10,9 @@
    the GNU General Public License.
 
    See the README file in the top-level LAMMPS directory.
+   
+   Modified by : Krishnakanth B, Theoretical Biophysics Laboratory, 
+   Molecular Biophysics Unit, Indian Institute of Science, Bangalore - 560012    
 ------------------------------------------------------------------------- */
 
 #include "atom.h"
@@ -436,7 +439,7 @@ void Atom::peratom_create()
   
   // SOP-HYBRID package
   add_peratom("domain_id",&domain_id,tagintsize,0);
-  add_peratom("residue_id",&residue_id,tagintsize,0);    
+  add_peratom("residue_id",&residue_id,tagintsize,0);  
 
   // MOLECULE package
 

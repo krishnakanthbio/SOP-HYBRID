@@ -9,6 +9,9 @@
    the GNU General Public License.
 
    See the README file in the top-level LAMMPS directory.
+
+   Modified by : Krishnakanth B, Theoretical Biophysics Laboratory, 
+   Molecular Biophysics Unit, Indian Institute of Science, Bangalore - 560012   
 ------------------------------------------------------------------------- */
 
 #include "force.h"
@@ -735,7 +738,7 @@ void Force::set_special(int narg, char **arg)
       special_coul[1] = 0.0;
       special_coul[2] = 0.0;
       special_coul[3] = 1.0;
-      iarg += 1;      
+      iarg += 1;
     } else if (strcmp(arg[iarg], "fene") == 0) {
       if (iarg + 1 > narg) error->all(FLERR, "Illegal special_bonds command");
       special_lj[1] = 0.0;
