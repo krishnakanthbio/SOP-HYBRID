@@ -3,7 +3,7 @@ SOP-HYBRID is a LAMMPS package for simulating IDP and Multidomain Proteins
 
 
 Usage instructions:
-Place this folder in the src folder of the LAMMPS source code and use
+Place this folder in the src folder of the LAMMPS source code and use <br>
 $ make yes-SOP-HYBRID
 
 ## In Serial environments
